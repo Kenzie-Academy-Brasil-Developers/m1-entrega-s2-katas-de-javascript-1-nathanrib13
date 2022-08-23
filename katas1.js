@@ -1,9 +1,9 @@
 
 //FUNCAO oneThroughTwenty
 function oneThroughTwenty(numero) {
-  let contagem = ''
+  let contagem = []
 for(let i = 1; i<=numero; i++) {
-   contagem +=`${i} `
+   contagem.push(i)
 }
 return contagem
 }
@@ -16,10 +16,10 @@ console.log(letsCount)
 
 //FUNCAO evensToTwenty
 function evensToTwenty(numero) { 
-  let contagemPares = ''
+  let contagemPares = []
 for(let i = 0; i<=numero; i++) { 
   if (i > 0 && i % 2 == 0 ) { 
-      contagemPares +=`${i} `
+    contagemPares.push(i)
   }
 }
 return contagemPares
@@ -32,10 +32,10 @@ let  letsCountTheEvens = evensToTwenty(20)
 
 //FUNCAO oddsToTwenty
 function oddsToTwenty(numero) {
-  let contagemImpars = ''
+  let contagemImpars = []
 for(let i = 0; i<=numero; i++) { 
   if (i > 0 && i % 2 !== 0 ) { 
-    contagemImpars +=`${i} `
+    contagemImpars.push(i)
   }
 }
 return contagemImpars
@@ -47,10 +47,10 @@ console.log(letsCountTheOdds)
 
  //FUNCAO multiplesOfFive
 function multiplesOfFive(numero) {
-  let multiplosArmazenados = ''
+  let multiplosArmazenados = []
 for(let i = 0; i<=numero; i++) { 
   if (i % 5 == 0 ) { 
-    multiplosArmazenados +=`${i} `
+    multiplosArmazenados.push(i)
   }
 }
 return multiplosArmazenados
@@ -65,14 +65,13 @@ console.log(multiplos5)
 
 //FUNCAO squareNumbers
 function squareNumbers(numero) {
-  let resultNumeros= ''
+  let resultNumeros= []
 
-  for (let i = 1; i<=numero; i++)  {
-    if (Math.sqrt(i) % 1 === 0) {
-      resultNumeros += `${i} `
+  for (let i = 1; i<=numero/10; i++)  {
+    
+    resultNumeros.push(i*i) 
     }
-    }
-  
+    
   return resultNumeros
 }
 let perfeitos = squareNumbers(100)
@@ -84,9 +83,9 @@ console.log(perfeitos)
 
 //FUNCAO countingBackwards
 function countingBackwards(numero) {
-  let contagemBack = ''
+  let contagemBack = []
   for(let i = numero; i>0; i--) {
-     contagemBack +=`${i} `
+     contagemBack.push(i)
   }
   return contagemBack
   }
@@ -100,10 +99,10 @@ function countingBackwards(numero) {
 
 //FUNCAO evenNumbersBackwards
 function evenNumbersBackwards(numero) {
-  let contagemPares = ''
+  let contagemPares = []
 for(let i = numero; i> 0 ; i--) { 
   if (i > 0 && i % 2 == 0 ) { 
-      contagemPares +=`${i} `
+      contagemPares.push(i)
   }
 }
 return contagemPares
@@ -116,10 +115,10 @@ let  letsCountBackTheEvens = evenNumbersBackwards(20)
 //FUNCAO oddNumbersBackwards
 function oddNumbersBackwards(numero) {
   
-  let contagemImpars = ''
+  let contagemImpars = []
   for(let i = numero; i>0; i--) { 
   if (i % 2 !== 0 ) { 
-    contagemImpars +=`${i} `
+    contagemImpars.push(i)
   }
 }
 return contagemImpars
@@ -134,11 +133,10 @@ console.log(letsCountBackTheOdds)
 
 //FUNCAO multiplesOfFiveBackwards
 function multiplesOfFiveBackwards(numero) {
-
-  let multiplosArmazenadosBack = ''
+  let multiplosArmazenadosBack = []
   for(let i = numero; i>0; i--) { 
     if (i % 5 == 0 ) { 
-      multiplosArmazenadosBack +=`${i} `
+      multiplosArmazenadosBack.push(i)
     }
   }
   return multiplosArmazenadosBack
@@ -149,18 +147,18 @@ function multiplesOfFiveBackwards(numero) {
 
 
 
-function squareNumbersBackwards(numero) {
-    
-  let resultNumeros= ''
+ function squareNumbersBackwards(numero) {
 
-  for (let i = numero; i > 0; i--)  {
-    if (Math.sqrt(i) % 1 === 0) {
-      resultNumeros += `${i} `
+  let resultNumeros= []
+
+  for (let i = numero/10; i>0; i--)  {
+    
+    resultNumeros.push(i*i) 
     }
-    }
-  
+    
   return resultNumeros
 }
+
 let perfeitosBacking = squareNumbersBackwards(100)
 console.log(perfeitosBacking)
 
